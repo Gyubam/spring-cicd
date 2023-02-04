@@ -36,6 +36,14 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
+        
+    # 환경 변수 설정
+    - name: Set environment values
+      run: |
+        cd ./src/main/resources
+        touch ./env.properties
+        echo "${{ secrets.ENV }}" > ./env.properties
+      shell: bash
     
     # gradle 빌드 (테스트 제외)
     - name: Build with Gradle
