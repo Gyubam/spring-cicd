@@ -7,6 +7,10 @@
 
 ## ELK 스택 적용
 - 로컬 환경에서의 적용 예제
+- https://github.com/deviantony/docker-elk 해당 리포지토리를 통한 손쉬운 환경설정 가능
+```
+git clone https://github.com/deviantony/docker-elk.git
+```
 - Elasticsearch + Logstash + Kibana
 - docker를 통한 logstash 환경 설정
 - 스프링에서 해당 logstash 아이피에 연결 시 자동 로그 적용
