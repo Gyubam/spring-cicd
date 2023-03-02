@@ -1,5 +1,15 @@
 server:
   port: 8080
+  tomcat:
+    accesslog:
+      enabled: true
+      directory: logs
+      suffix: .log
+      prefix: access_log
+      file-date-format: .yyyy-MM-dd
+      pattern: '%{yyyy-MM-dd HH:mm:ss}t %s %r %{User-Agent}i %{Referer}i %a %b'
+    basedir: .
+
 
 spring:
   rabbitmq:
@@ -7,3 +17,4 @@ spring:
     port: ${application.spring.rabbitmq.port}
     username: ${application.spring.rabbitmq.username}
     password: ${application.spring.rabbitmq.password}
+

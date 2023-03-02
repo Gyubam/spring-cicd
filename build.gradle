@@ -25,6 +25,9 @@ dependencies {
 	//rabbitmq
 	implementation 'org.springframework.boot:spring-boot-starter-amqp'
 
+	// log message를 ELK가 읽을 수 있는 json형태의 로그로 변경을 위함
+	implementation group: 'net.logstash.logback', name: 'logstash-logback-encoder', version: '6.3'
+
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
